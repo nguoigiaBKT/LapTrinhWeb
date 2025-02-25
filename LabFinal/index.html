@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flightly - Book Your Journey</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), 
+                        url('./img/mb.jpg') center/cover no-repeat;
+            height: 80vh;
+            display: flex;
+            flex-direction:row;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        /* Booking Section */
+        .booking-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-control {
+            border-radius: 8px;
+        }
+
+        .btn-primary {
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        /* Ticket Summary */
+        .ticket-summary {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Destination Section */
+        .destination-card {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .destination-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .destination-card:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">FLIGHTLY</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Deals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+                <a class="btn btn-primary ms-3" href="#">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="hero">
+        <h1>Book Your Journey</h1>
+    </div>
+
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 booking-card">
+                <h3 class="text-center">Find Your Ticket</h3>
+                <form>
+                    <div class="row g-2">
+                        <div class="col-md-6"><input type="text" class="form-control" placeholder="From"></div>
+                        <div class="col-md-6"><input type="text" class="form-control" placeholder="To"></div>
+                        <div class="col-md-6"><input type="date" class="form-control"></div>
+                        <div class="col-md-6"><input type="date" class="form-control"></div>
+                        <div class="col-md-6"><input type="text" class="form-control" placeholder="Class"></div>
+                        <div class="col-md-6"><input type="number" class="form-control" placeholder="Travelers"></div>
+                        <div class="col-md-6"><input type="radio"> One Way</div>
+                        <div class="col-md-6"><input type="radio"> Round Way</div>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-primary w-100">Book Now</button>
+                    </div>
+                </form>
+                <div class="ticket-summary mt-3">
+                    <h5><strong>Ticket Summary</strong></h5>
+                    <p>From: <strong>Italy</strong> ➝ To: <strong>Australia</strong></p>
+                    <p>Check-in: <strong>01 JUN 2023</strong></p>
+                    <p>Check-out: <strong>10 JUN 2023</strong></p>
+                    <p>Class: <strong>Economy</strong></p>
+                    <p>Travelers: <strong>2</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center my-5">
+        <h2>Explore the <strong>World</strong></h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="destination-card">
+                    <img src="asia.jpg" alt="Asia">
+                    <h5>Asia</h5>
+                    <p>From $200</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="destination-card">
+                    <img src="singapore.jpg" alt="Singapore">
+                    <h5>Singapore</h5>
+                    <p>From $300</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="destination-card">
+                    <img src="germany.jpg" alt="Germany">
+                    <h5>Germany</h5>
+                    <p>From $400</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="destination-card">
+                    <img src="dubai.jpg" alt="Dubai">
+                    <h5>Dubai</h5>
+                    <p>From $500</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
